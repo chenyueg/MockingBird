@@ -102,4 +102,4 @@
 
 ## Next
 
-M1 and M2 are complete. Stop here; M3 has not been started.
+M1 and M2 are complete. M3 has not been started, but it is now ready to implement/run. Follow `M3_PLAN.md` for the encoding audit and controlled emotion-shift baseline. Do not start M4 intervention work until M3 is complete and reviewed.
