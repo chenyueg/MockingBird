@@ -4,11 +4,11 @@
 
 ### Working title
 
-**Encoded ≠ Used: Auditing Non-Target Information in Speech Representations under Distribution Shift**
+**Encoded ≠ Used: Auditing Confounder Reliance in Speech Emotion Recognition under Distribution Shift**
 
 Alternative conservative title:
 
-**From Decodability to Reliance: Auditing Speech Representations for Emotion Recognition under Controlled Distribution Shifts**
+**From Decodability to Reliance: Auditing Confounders in Speech Emotion Recognition under Controlled Distribution Shifts**
 
 ### Target venue
 
@@ -16,13 +16,13 @@ NAACL 2027 main conference via the October 2026 ARR cycle.
 
 ### Central research question
 
-When a pretrained speech representation encodes information about lexical content, speaker identity, gender, or other non-target attributes, does a downstream emotion classifier actually rely on that information?
+When a pretrained speech representation encodes information about lexical content, speaker identity, gender, or other confounders, does a downstream emotion classifier actually rely on that information?
 
 More specifically:
 
-1. Which task-relevant and non-target attributes are linearly decodable from different layers of pretrained speech encoders?
+1. Which task-relevant and confounders are linearly decodable from different layers of pretrained speech encoders?
 2. Does high decodability imply that an emotion classifier relies on the corresponding information?
-3. Does targeted removal of non-target information change emotion performance under the distribution shift associated with that attribute?
+3. Does targeted removal of confounder information change emotion performance under the distribution shift associated with that attribute?
 4. Are the relationships between **encoding → reliance → generalization failure** consistent across models and datasets?
 
 ### Scientific distinction
@@ -67,12 +67,9 @@ Use as secondary analyses:
 
 Do not describe gender as inherently "spurious."
 
-Use the terms:
-
-- non-target attribute
-- nuisance factor when appropriate
-- distribution-shift factor
-- shortcut only when experimental evidence supports shortcut behavior
+Use **confounder** consistently for speaker identity, statement / lexical identity,
+and related labeled variation that is not the target emotion. Reserve
+**shortcut** for cases where experimental evidence supports a robustness cost.
 
 Speaker and gender are nested variables; speaker removal may necessarily affect gender information. Always measure such collateral effects.
 
@@ -140,7 +137,7 @@ Only after the core pipeline works:
 
 This is scientifically valuable because it allows:
 
-> Does emotion-oriented representation learning change the degree to which non-target information is encoded or relied upon?
+> Does emotion-oriented representation learning change the degree to which confounder information is encoded or relied upon?
 
 But do not let integration difficulties with FunASR/model-specific code block the main paper.
 
@@ -576,7 +573,7 @@ Do not assume the final layer is optimal.
 Continue only if all of the following are true:
 
 1. emotion is meaningfully decodable;
-2. at least one non-target attribute is clearly above its baseline;
+2. at least one confounder is clearly above its baseline;
 3. at least one controlled shift creates a meaningful emotion-performance gap;
 4. results are not explained by a manifest/split bug.
 
@@ -838,7 +835,7 @@ High scientific value.
 
 Question:
 
-Does an emotion-specialized encoder encode or rely on less non-target information than general speech encoders?
+Does an emotion-specialized encoder encode or rely on less confounder information than general speech encoders?
 
 ### 5B. Small nonlinear probe after LEACE
 
