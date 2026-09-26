@@ -84,14 +84,14 @@ or other sensitive infrastructure details.
 
 Keep these three claims separate:
 
-1. **Encoding** — is non-target information accessible from the representation?
+1. **Encoding** — is confounder information accessible from the representation?
 2. **Reliance** — does the already-trained emotion classifier depend on it?
 3. **Generalization consequence** — does removing access to it change learning
    under the corresponding distribution shift?
 
 Do not treat probe accuracy as evidence of reliance.
 Do not treat reliance as evidence of harmful generalization.
-Do not call an attribute a shortcut unless the corresponding evidence supports
+Use **confounder** consistently for speaker/statement and related labeled factors in research prose. Do not call a confounder a shortcut unless the corresponding evidence supports
 that interpretation.
 
 Null, negative, and contradictory results must be preserved.
