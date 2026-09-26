@@ -991,7 +991,7 @@ Emotion performance across:
 For attribute/layer/model points:
 
 ```text
-x = non-target decodability
+x = confounder decodability
 y = targeted intervention effect beyond random control
 ```
 
@@ -1386,7 +1386,7 @@ Do not implement concept erasure yet.
 
 At completion, write a compact Stage 1 scientific summary into STATUS.md:
 - best emotion layers
-- strongest non-target layers
+- strongest confounder-encoding layers
 - OOD gaps
 - whether the Stage 1 research gate passes
 
@@ -1559,13 +1559,13 @@ After Stage 1:
 
 ### Case A
 
-Non-target information is decodable and OOD performance drops.
+Confounder information is decodable and OOD performance drops.
 
 → Run intervention.
 
 ### Case B
 
-Non-target information is decodable but no OOD gap exists.
+Confounder information is decodable but no OOD gap exists.
 
 → Interesting for encoded-vs-generalization distinction, but not enough for central claim.
 
@@ -1611,7 +1611,7 @@ Erasure slightly hurts ID but improves OOD.
 
 Headline:
 
-**Non-target information can provide in-distribution utility while harming generalization.**
+**Confounder information can provide in-distribution utility while harming generalization.**
 
 Potential strongest result.
 
